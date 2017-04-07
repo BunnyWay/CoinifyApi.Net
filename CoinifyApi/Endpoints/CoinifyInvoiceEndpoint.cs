@@ -46,7 +46,7 @@ namespace CoinifyApi
         /// <summary>
         /// Create a new invoice
         /// </summary>
-        public void CreateInvoice(double amount, string currency, string description = null, string custom = null, string callbackUrl = null, string callbackEmail = null, string returnUrl = null, string cancelUrl = null, string inputCurrency = null, string inputReturnAddress = null)
+        public Invoice CreateInvoice(double amount, string currency, string description = null, string custom = null, string callbackUrl = null, string callbackEmail = null, string returnUrl = null, string cancelUrl = null, string inputCurrency = null, string inputReturnAddress = null)
         {
             var invoice = new InvoiceCreate()
             {
@@ -61,7 +61,7 @@ namespace CoinifyApi
                 InputReturnAddress = inputReturnAddress,
                 ReturnUrl = returnUrl
             };
-            var response = this.SendApiRequest<object>("", 
+            var response = this.SendApiRequest<Invoice>("", 
                 JsonConvert.SerializeObject(
                     invoice, 
                     Formatting.None, 
@@ -71,7 +71,7 @@ namespace CoinifyApi
                     })
                 );
 
-            Console.WriteLine(response);
+            return response;
         }
     }
 }

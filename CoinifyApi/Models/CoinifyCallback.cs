@@ -42,6 +42,6 @@ namespace CoinifyApi
         /// The object, dependent on the event parameter
         /// </summary>
         [JsonProperty("data")]
-        public object DataObject { get; set; }
+        public Invoice InvoiceData { get; set; }
     }
 }

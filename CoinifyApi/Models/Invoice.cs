@@ -33,9 +33,15 @@ namespace CoinifyApi
         public const string StateExpired = "expired";
 
         /// <summary>
-        /// The currency of the invoice
+        /// The ID of the invoice
         /// </summary>
         [JsonProperty("id")]
+        public int Id { get; set; }
+
+        /// <summary>
+        /// The currency of the invoice
+        /// </summary>
+        [JsonProperty("currency")]
         public long Currency { get; set; }
 
         /// <summary>

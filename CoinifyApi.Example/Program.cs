@@ -13,8 +13,8 @@ namespace CoinifyApi.Example
         static void Main(string[] args)
         {
             var coinify = new Coinify(
-                "JcAAmbTH6ZLU4cO4Tlp1ZSZ5fggx3s8+lvPSj/lZeLHqY8p6u881onEINJ2DtNtv", 
-                "mgql917MO1Jej7nQ2cijcYPgSdHeaYQMAvfzXcHyfDmoVhd/tqugDoUpT5Mj0ztl");
+                "1wCeblZxlWGryO7WrXLnkfUU1XJMFhphiw7d1jG8ykj92AC+ZgzoqCjgYpqJzDKd",
+                "EmefRmd9d4vw4xCgSXPWGIjBWWbAoak9HXxcDTvrUaz9L0nsspztN77eXytFF5r3");
 
             Console.ReadLine();
         }
