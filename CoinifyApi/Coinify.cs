@@ -21,7 +21,7 @@ namespace CoinifyApi
         /// <summary>
         /// The base URL of the API
         /// </summary>
-        private string _ApiUrl = "https://api.coinify.com/v3/";
+        private string _ApiUrl = "";
 
         /// <summary>
         /// The API key used for authenticatio
@@ -54,7 +54,7 @@ namespace CoinifyApi
         /// <summary>
         /// Create a new coinify object
         /// </summary>
-        public Coinify(string apiKey, string apiSecret, string apiUrl = "https://api.coinify.com/v3/")
+        public Coinify(string apiKey, string apiSecret, string apiUrl)
         {
             this._ApiKey = apiKey;
             this._ApiSecret = apiSecret;
