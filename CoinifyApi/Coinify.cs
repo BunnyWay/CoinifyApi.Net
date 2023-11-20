@@ -21,7 +21,7 @@ namespace CoinifyApi
         /// <summary>
         /// The base URL of the API
         /// </summary>
-        public const string ApiUrl = "https://api.coinify.com/v3/";
+        private string _ApiUrl = "https://api.coinify.com/v3/";
 
         /// <summary>
         /// The API key used for authenticatio
@@ -54,10 +54,11 @@ namespace CoinifyApi
         /// <summary>
         /// Create a new coinify object
         /// </summary>
-        public Coinify(string apiKey, string apiSecret)
+        public Coinify(string apiKey, string apiSecret, string apiUrl = "https://api.coinify.com/v3/")
         {
             this._ApiKey = apiKey;
             this._ApiSecret = apiSecret;
+            this._ApiUrl = apiUrl;
 
             this.Rates = new CoinifyRatesEndpoint(this);
             this.AltcoinRates = new CoinifyAltcoinRatesEndpoint(this);
@@ -79,7 +80,7 @@ namespace CoinifyApi
             var authHeader = $"Coinify apikey=\"{this._ApiKey}\", nonce=\"{nonce}\", signature=\"{signature}\"";
 
             // Create the web request
-            var request = (HttpWebRequest)HttpWebRequest.Create(Coinify.ApiUrl + endpoint.EndpointName + path);
+            var request = (HttpWebRequest)HttpWebRequest.Create(_ApiUrl + endpoint.EndpointName + path);
             request.Headers["Authorization"] = authHeader;
             if(postData != null)
             {
