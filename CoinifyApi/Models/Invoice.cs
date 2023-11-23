@@ -33,6 +33,21 @@ namespace CoinifyApi
         public const string StateExpired = "expired";
 
         /// <summary>
+        /// Normal payment
+        /// </summary>
+        public const string TypeNormal = "normal";
+
+        /// <summary>
+        /// The original payment received too much payment or received a payment too late
+        /// </summary>
+        public const string TypeExtra = "extra";
+
+        /// <summary>
+        /// The payment received too little payment within the time limit and the payment amounts were adjusted to match the actual paid amount
+        /// </summary>
+        public const string TypeUnderpaid = "underpaid";
+
+        /// <summary>
         /// The ID of the invoice
         /// </summary>
         [JsonProperty("id")]
