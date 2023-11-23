@@ -53,8 +53,20 @@ namespace CoinifyApi
         /// <summary>
         /// The state of the invoice
         /// </summary>
+        /// <remarks>
+        /// Can be new, paid, complete or expired
+        /// </remarks>
         [JsonProperty("state")]
         public string State { get; set; }
+
+        /// <summary>
+        /// The payment type
+        /// </summary>
+        /// <remarks>
+        /// Can be normal, underpaid or extra
+        /// </remarks>
+        [JsonProperty("type")]
+        public string Type { get; set; }
 
         /// <summary>
         /// The bitcoin details for this specific payment
