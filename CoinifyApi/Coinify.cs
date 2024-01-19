@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Net;
 using Newtonsoft.Json;
 
@@ -16,22 +13,22 @@ namespace CoinifyApi
         /// <summary>
         /// The buffer used for reading the API response
         /// </summary>
-        private byte[] _Buffer = new byte[4096];
+        private readonly byte[] _Buffer = new byte[4096];
 
         /// <summary>
         /// The base URL of the API
         /// </summary>
-        private string _ApiUrl = "";
+        private readonly string _ApiUrl = "";
 
         /// <summary>
         /// The API key used for authenticatio
         /// </summary>
-        private string _ApiKey = "";
+        private readonly string _ApiKey = "";
 
         /// <summary>
         /// The API secret key used for authentication
         /// </summary>
-        private string _ApiSecret = "";
+        private readonly string _ApiSecret = "";
 
 
         /// <summary>
@@ -110,8 +107,7 @@ namespace CoinifyApi
                     var result = JsonConvert.DeserializeObject<CoinifyApiResponse<T>>(responseBodyBuilder.ToString());
                     if (!result.Success)
                     {
-                        // TODO: include data
-                        throw new CoinifyApiException();
+                        throw new CoinifyApiException(result.Error.Code, result.Error.Message);
                     }
 
                     return result.Data;

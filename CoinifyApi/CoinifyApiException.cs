@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CoinifyApi
 {
@@ -11,5 +7,8 @@ namespace CoinifyApi
     /// </summary>
     public class CoinifyApiException : Exception
     {
+        public CoinifyApiException(string code, string message) : base($"{code}: {message}")
+        {
+        }
     }
 }
