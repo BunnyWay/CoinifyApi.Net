@@ -1,11 +1,11 @@
-﻿
+
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinifyApi", "CoinifyApi\CoinifyApi.csproj", "{974E21A1-EACD-4B89-A876-AAC28EB5ED45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinifyApi", "CoinifyApi\CoinifyApi.csproj", "{974E21A1-EACD-4B89-A876-AAC28EB5ED45}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoinifyApi.Example", "CoinifyApi.Example\CoinifyApi.Example.csproj", "{D7283514-69B0-498D-99BC-A8CC79A73034}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinifyApi.Example", "CoinifyApi.Example\CoinifyApi.Example.csproj", "{D7283514-69B0-498D-99BC-A8CC79A73034}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
